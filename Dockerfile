@@ -11,7 +11,7 @@ WORKDIR /app
 RUN git clone https://github.com/deepseek-ai/DeepSeek-V3.git /app
 
 # Instalar dependências do Python
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r /app/inference/requirements.txt
 
 # Comando para iniciar o modelo automaticamente no RunPod
 CMD ["python", "-m", "deepseek.model"]
